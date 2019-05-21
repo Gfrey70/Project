@@ -21,9 +21,6 @@
     overflow: hidden;
     padding: 3px;
 }
-.vl-account-pane-open{
-  width:100%;
-}
 .vl-account-pane {
     background: #5a5339;
     position: fixed;
@@ -33,6 +30,11 @@
     left: 0;
     right: 0;
     overflow:hidden;
+    transition:.3s;
+}
+.vl-account-pane-open{
+  width:100%;
+  transition:.3s;
 }
 .vl-close-btn-pane{
   display:block;
@@ -62,6 +64,9 @@
   color:#ffffff;
 }
 .vl-content{
+  display:none;
+}
+.vl-all-form{
   display:none;
 }
 .vl-content-open{
