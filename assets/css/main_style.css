@@ -1,0 +1,23 @@
+.vl-map-holder{
+  width:100%;
+  height:100%;
+}
+#vl-map-container{
+  background-image:url('../img/GoogleMapTA.jpg');
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.vl-card {
+  background: #5a5339;
+  color: #ffffff;
+  padding: 18px;
+  border-radius: 9px;
+}
+.vl-card p {
+    height: 118px;
+    overflow: hidden;
+    padding: 3px;
+}
