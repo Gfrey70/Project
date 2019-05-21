@@ -11,5 +11,11 @@ class homectrl extends CI_controller
     parent::__construct();
     $this->load->helper('url');
   }
+  function index()
+  {
+    $this->load->view('head');
+    $this->load->view('homepanel');
+    $this->load->view('footer');
+  }
 }
  ?>
