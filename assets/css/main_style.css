@@ -31,6 +31,9 @@
     right: 0;
     overflow:hidden;
     transition:.3s;
+    -webkit-box-shadow: 25px 8px 46px -20px rgba(0,0,0,0.44);
+    -moz-box-shadow: 25px 8px 46px -20px rgba(0,0,0,0.44);
+    box-shadow: 25px 8px 46px -20px rgba(0,0,0,0.44);
 }
 .vl-account-pane-open{
   width:100%;
@@ -82,6 +85,7 @@
 .vl-input-underline {
     background: #5a5339;
     outline: none;
+    color:#ffffff;
     border: 1px solid #c16a63;
 }
 .vl-btn-login {

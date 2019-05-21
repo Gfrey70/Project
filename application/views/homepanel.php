@@ -82,11 +82,57 @@
         </form>
         <form id="vl-signup-form" class="vl-all-form" action="index.html" method="post">
           <h5>SIGN UP</h5>
-          <div class="form-group">
-            <input placeholder="Email" type="text" class="form-control vl-input-underline" name="" value="">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input placeholder="First Name" type="text" class="form-control vl-input-underline" name="" value="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input placeholder="Last Name" type="text" class="form-control vl-input-underline" name="" value="">
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <input placeholder="Password" type="password" class="form-control vl-input-underline" name="" value="">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input placeholder="Address" type="text" class="form-control vl-input-underline" name="" value="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+              <select class="form-control vl-input-underline" name="">
+                <option value="" selected disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input placeholder="Email" type="text" class="form-control vl-input-underline" name="" value="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input placeholder="Mobile" type="text" class="form-control vl-input-underline" name="" value="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input placeholder="Password" type="password" class="form-control vl-input-underline" name="" value="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input placeholder="Re-type Password" type="password" class="form-control vl-input-underline" name="" value="">
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <button type="submit" name="button" class="form-control vl-btn-login">Login</button>
