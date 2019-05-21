@@ -11,5 +11,11 @@ class userctrl extends CI_controller
     parent::__construct();
     $this->load->helper('url');
   }
+  function userview()
+  {
+    $this->load->view('head');
+    $this->load->view('user_dashboard');
+    $this->load->view('footer');
+  }
 }
  ?>
