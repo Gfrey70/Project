@@ -21,14 +21,24 @@
     overflow: hidden;
     padding: 3px;
 }
+.vl-account-pane-open{
+  width:100%;
+}
 .vl-account-pane {
     background: #5a5339;
     position: fixed;
     top: 0;
-    /* width: 4%; */
+    width: 6%;
     bottom: 0;
     left: 0;
     right: 0;
+    overflow:hidden;
+}
+.vl-close-btn-pane{
+  display:block;
+}
+#vl-open-btn-holder {
+    padding: 10px;
 }
 .vl-hader-bar{
   padding:10px;
@@ -36,18 +46,43 @@
 .vl-info-list{
   float:right;
 }
-.vl-info-list ul {
+.vl-hader-bar ul {
     padding: 0;
     list-style:none;
 }
-.vl-info-list ul li{
+.vl-hader-bar ul li{
   display:inline-block;
 }
-.vl-info-list ul li{
+.vl-hader-bar ul li{
   color:#c16a63;
 }
 .vl-btn-outline{
   border:1px solid #c16a63;
   background:#5a5339;
   color:#ffffff;
+}
+.vl-content{
+  display:none;
+}
+.vl-content-open{
+  display:block;
+}
+.vl-form-wrapper{
+  position:relative;
+  top:20%;
+}
+.vl-form-wrapper h5 {
+    color: #c16a63;
+}
+.vl-input-underline {
+    background: #5a5339;
+    outline: none;
+    border: 1px solid #c16a63;
+}
+.vl-btn-login {
+    background: #c16a63;
+    border: none;
+    color: #5a5339;
+    height: 50px;
+    font-size: 23px;
 }
