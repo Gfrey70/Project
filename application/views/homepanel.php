@@ -45,7 +45,19 @@
       </div>
     </div>
   </div>
-  <div class="container-flui vl-account-pane">
-
+  <div class="vl-account-pane">
+    <div class="container-fluid vl-hader-bar">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="vl-info-list">
+            <ul>
+              <!-- <li class="pro-list-border"><i class="fa fa-user"></i Kassam Mustapha</li> -->
+              <li>Not a member ? <button type="button" name="button" class="btn vl-btn-outline">Sign Up</button> </li>
+              <li><button type="button" name="button" class="btn vl-btn-outline">Close</button> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

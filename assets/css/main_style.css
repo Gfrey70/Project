@@ -21,3 +21,33 @@
     overflow: hidden;
     padding: 3px;
 }
+.vl-account-pane {
+    background: #5a5339;
+    position: fixed;
+    top: 0;
+    /* width: 4%; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.vl-hader-bar{
+  padding:10px;
+}
+.vl-info-list{
+  float:right;
+}
+.vl-info-list ul {
+    padding: 0;
+    list-style:none;
+}
+.vl-info-list ul li{
+  display:inline-block;
+}
+.vl-info-list ul li{
+  color:#c16a63;
+}
+.vl-btn-outline{
+  border:1px solid #c16a63;
+  background:#5a5339;
+  color:#ffffff;
+}
