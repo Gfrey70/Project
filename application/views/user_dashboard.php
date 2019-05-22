@@ -104,34 +104,34 @@
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" ckass="form-control" type="text" name="" value="">
+                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" ckass="form-control" type="text" name="" value="">
+                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" ckass="form-control" type="text" name="" value="">
+                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" ckass="form-control" type="text" name="" value="">
+                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" ckass="form-control" type="text" name="" value="">
+                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" ckass="form-control" type="text" name="" value="">
+                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
                 </div>
