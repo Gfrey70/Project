@@ -87,7 +87,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 vl-1-border">
           <div class="">
             <div class="vl-panel-nav">
               <h6>USER PANEL</h6>
