@@ -77,10 +77,10 @@
         <form id="vl-login-form" class="vl-all-open-form" action="<?php echo base_url('index.php/user/login');?>" method="post">
           <h5>LOGIN</h5>
           <div class="form-group">
-            <input placeholder="Email" type="text" class="form-control vl-input-underline" name="email" value="">
+            <input required placeholder="Email" type="text" class="form-control vl-input-underline" name="email" value="">
           </div>
           <div class="form-group">
-            <input placeholder="Password" type="password" class="form-control vl-input-underline" name="password" value="">
+            <input required placeholder="Password" type="password" class="form-control vl-input-underline" name="password" value="">
           </div>
           <div class="form-group">
             <button type="submit" name="button" class="form-control vl-btn-login">Login</button>
