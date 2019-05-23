@@ -17,7 +17,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
                   <ul>
                     <li><span class="vl-name"><?php echo $value->fname." ".$value->lname;?></span></li>
                     <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                    <li><div class="badge badge-primary"><?php echo $value->rolename;?></div> </li>
+                    <li><div class="badge badge-primary">Driver</div> </li>
                   </ul>
                 </div>
               <?php }; ?>
@@ -36,7 +36,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
             <!-- end here -->
             <div class="vl-panel-body">
               <h6>Driver details</h6>
-              <form class="" action="index.html" method="post">
+              <form class="" action="<?php echo base_url('index.php/garage/driverpanel/add');?>" method="post">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -91,7 +91,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
 
                 </div>
                 <div class="form-group">
-                  <button type="submit" name="button" class="form-control vl-btn-login vl-wt-clr">Save Owner</button>
+                  <button type="submit" name="button" class="form-control vl-btn-login vl-wt-clr">Save Driver</button>
                 </div>
               </form>
             </div>

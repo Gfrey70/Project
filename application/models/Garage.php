@@ -9,6 +9,10 @@ class Garage extends CI_model
   {
     $this->db->insert('users',$data);
   }
+  function insertDriver($data)
+  {
+    $this->db->insert('drivers',$data);
+  }
   function getDrivers()
   {
     $this->db->select('*');

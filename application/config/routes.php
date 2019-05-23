@@ -56,6 +56,7 @@ $route['user/logout'] = 'userctrl/userLogout';
 $route['garage/panel/add'] = 'garagectrl/registerOnwer';
 $route['garage/panel'] = 'garagectrl/garageview';
 $route['garage/ownerpanel'] = 'garagectrl/ownerview';
+$route['garage/driverpanel/add'] = 'garagectrl/registerDriver';
 $route['garage/driverpanel'] = 'garagectrl/driverview';
 $route['tips/panel'] = 'tipsctrl/tipsview';
 $route['go/home'] = 'homectrl';

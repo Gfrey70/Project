@@ -20,6 +20,12 @@ class garagectrl extends CI_controller
     $this->Garage->insertOwner($userdata);
     redirect('garage/ownerpanel');
   }
+  function registerDriver()
+  {
+    $driver = $this->input->post('driver');
+    $this->Garage->insertDriver($driver);
+    redirect('garage/driverpanel');
+  }
   function driverview()
   {
     $data['driverlist'] = $this->Garage->getDrivers();
