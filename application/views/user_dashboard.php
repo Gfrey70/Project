@@ -92,10 +92,10 @@
             <div class="vl-panel-nav">
               <h6>USER PANEL</h6>
               <ul>
-                <li><a href="#"><i class="fa fa-user"></i> User</a> </li>
-                <li><a href="#"><i class="fa fa-user"></i> Garage</a> </li>
-                <li><a href="#"><i class="fa fa-user"></i> Owner</a></li>
-                <li><a href="#"><i class="fa fa-user"></i> Tips</a> </li>
+                <li><a href="<?php echo base_url('index.php/user/panel');?>"><i class="fa fa-user"></i> User</a> </li>
+                <li><a href="<?php echo base_url('index.php/garage/panel');?>"><i class="fa fa-user"></i> Garage</a> </li>
+                <li><a href="<?php echo base_url('index.php/garage/ownerpanel');?>"><i class="fa fa-user"></i> Owner</a></li>
+                <li><a href="<?php echo base_url('index.php/tips/panel');?>"><i class="fa fa-user"></i> Tips</a> </li>
               </ul>
             </div>
             <div class="vl-panel-body">
