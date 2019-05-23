@@ -12,6 +12,13 @@ class userctrl extends CI_controller
     $this->load->helper('url');
     $this->load->model('Users');
   }
+  function registerUser()
+  {
+    $userdata = $this->input->post('user');
+    $userdata['password'] = md5($userdata['lname']);
+    $this->Users->insertUser($userdata);
+    redirect('user/panel');
+  }
   function userview()
   {
     $data['userlist'] = $this->Users->getAllUsers();

@@ -15,6 +15,10 @@ class Users extends CI_model
       return false;
     }
   }
+  function insertUser($data)
+  {
+    $this->db->insert('users',$data);
+  }
   function userAuthenticates($email,$password)
   {
     $filter = array('email' => $email, 'password'=>$password);

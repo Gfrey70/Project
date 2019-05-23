@@ -36,23 +36,23 @@ if(!$this->session->userdata('isSessionThere') == true) {
             <!-- end here -->
             <div class="vl-panel-body">
               <h6>User details</h6>
-              <form class="" action="index.html" method="post">
+              <form class="" action="<?php echo base_url('index.php/user/panel/add');?>" method="post">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
+                      <input placeholder="First Name" class="form-control" type="text" name="user[fname]" value="">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Last Name" class="form-control" type="text" name="" value="">
+                      <input placeholder="Last Name" class="form-control" type="text" name="user[lname]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <select class="form-control" name="">
+                      <select class="form-control" name="user[gender]">
                         <option value="" selected disabled>Select gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -61,27 +61,27 @@ if(!$this->session->userdata('isSessionThere') == true) {
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="Address" class="form-control" type="text" name="" value="">
+                      <input placeholder="Address" class="form-control" type="text" name="user[address]" value="">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="Email" class="form-control" type="text" name="" value="">
+                      <input placeholder="Email" class="form-control" type="text" name="user[email]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Mobile" class="form-control" type="text" name="" value="">
+                      <input placeholder="Mobile" class="form-control" type="text" name="user[mobile]" value="">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <select class="form-control" name="">
+                      <select class="form-control" name="user[rolename]">
                         <option value="" selected disabled>Select Role</option>
                         <option value="admin">Admin</option>
-                        <option value="owner">Female</option>
+                        <option value="normal">Normal</option>
                       </select>
                     </div>
                   </div>
