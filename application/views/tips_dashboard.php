@@ -40,7 +40,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input placeholder="Tips title" class="form-control" type="text" name="tips[TipsTitle]" value="">
+                      <input required placeholder="Tips title" class="form-control" type="text" name="tips[TipsTitle]" value="">
                     </div>
                   </div>
                 </div>

@@ -40,19 +40,19 @@ if(!$this->session->userdata('isSessionThere') == true) {
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="First Name" class="form-control" type="text" name="user[fname]" value="">
+                      <input required placeholder="First Name" class="form-control" type="text" name="user[fname]" value="">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Last Name" class="form-control" type="text" name="user[lname]" value="">
+                      <input required placeholder="Last Name" class="form-control" type="text" name="user[lname]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <select class="form-control" name="user[gender]">
+                      <select required class="form-control" name="user[gender]">
                         <option value="" selected disabled>Select gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -61,7 +61,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="Address" class="form-control" type="text" name="user[address]" value="">
+                      <input required placeholder="Address" class="form-control" type="text" name="user[address]" value="">
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -73,12 +73,12 @@ if(!$this->session->userdata('isSessionThere') == true) {
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Mobile" class="form-control" type="text" name="user[mobile]" value="">
+                      <input required placeholder="Mobile" class="form-control" type="text" name="user[mobile]" value="">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <select class="form-control" name="user[rolename]" readonly>
+                      <select required class="form-control" name="user[rolename]" readonly>
                         <option value="owner" selected>Owner</option>
                       </select>
                     </div>

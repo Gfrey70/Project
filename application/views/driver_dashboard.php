@@ -40,19 +40,19 @@ if(!$this->session->userdata('isSessionThere') == true) {
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="First Name" class="form-control" type="text" name="driver[fname]" value="">
+                      <input required placeholder="First Name" class="form-control" type="text" name="driver[fname]" value="">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Last Name" class="form-control" type="text" name="driver[lname]" value="">
+                      <input required placeholder="Last Name" class="form-control" type="text" name="driver[lname]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <select class="form-control" name="driver[gender]">
+                      <select required class="form-control" name="driver[gender]">
                         <option value="" selected disabled>Select gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -61,7 +61,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="Address" class="form-control" type="text" name="driver[address]" value="">
+                      <input required placeholder="Address" class="form-control" type="text" name="driver[address]" value="">
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -73,19 +73,19 @@ if(!$this->session->userdata('isSessionThere') == true) {
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Country" class="form-control" type="text" name="driver[country]" value="">
+                      <input readonly placeholder="Country" class="form-control" type="text" name="driver[country]" value="tanzania">
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="City" class="form-control" type="text" name="driver[city]" value="">
+                      <input required placeholder="City" class="form-control" type="text" name="driver[city]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input placeholder="Phone Number" class="form-control" type="text" name="driver[pnumber]" value="">
+                      <input required placeholder="Phone Number" class="form-control" type="text" name="driver[pnumber]" value="">
                     </div>
                   </div>
 
