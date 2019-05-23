@@ -102,38 +102,56 @@
               <h6>User details</h6>
               <form class="" action="index.html" method="post">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="form-group">
                       <input placeholder="First Name" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
+                      <input placeholder="Last Name" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
+                      <select class="form-control" name="">
+                        <option value="" selected disabled>Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
+                      <input placeholder="Address" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input placeholder="First Name" class="form-control" type="text" name="" value="">
+                      <input placeholder="Email" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input placeholder="Mobile" class="form-control" type="text" name="" value="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <select class="form-control" name="">
+                        <option value="" selected disabled>Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="owner">Female</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" name="button" class="form-control vl-btn-login vl-wt-clr">Save user</button>
                 </div>
               </form>
             </div>
