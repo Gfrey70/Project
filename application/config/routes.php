@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['user/panel'] = 'userctrl/userview';
 $route['garage/panel'] = 'garagectrl/garageview';
 $route['garage/ownerpanel'] = 'garagectrl/ownerview';
+$route['tips/panel'] = 'tipsctrl/tipsview';
 $route['default_controller'] = 'homectrl';
 // $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
