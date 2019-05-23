@@ -1,4 +1,8 @@
-<?php defined('BASEPATH')OR exit('Error'); ?>
+<?php defined('BASEPATH')OR exit('Error');
+//block the page unless someone is login in the system
+if(!$this->session->userdata('isSessionThere') == true) {
+  redirect('go/home');
+}?>
 <body class="vl-bg-color">
   <section>
     <div class="col-md-10 container">

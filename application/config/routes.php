@@ -54,6 +54,7 @@ $route['garage/panel'] = 'garagectrl/garageview';
 $route['garage/ownerpanel'] = 'garagectrl/ownerview';
 $route['garage/driverpanel'] = 'garagectrl/driverview';
 $route['tips/panel'] = 'tipsctrl/tipsview';
+$route['go/home'] = 'homectrl';
 $route['default_controller'] = 'homectrl';
 // $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
