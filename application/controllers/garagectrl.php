@@ -40,8 +40,15 @@ class garagectrl extends CI_controller
     $this->load->view('owner_dashboard',$data);
     $this->load->view('footer');
   }
+  function insertGarage()
+  {
+    $gDetails = $this->input->post('garage');
+    $this->Garage->saveGarage($gDetails);
+    redirect('garage/panel');
+  }
   function garageview()
   {
+    $data['ownerlist'] = $this->Users->getOwnerList();
     $data['garagelist'] = $this->Garage->getGarages();
     $this->load->view('head');
     $this->load->view('garage_dashboard',$data);

@@ -36,74 +36,77 @@ if(!$this->session->userdata('isSessionThere') == true) {
             <!-- end here -->
             <div class="vl-panel-body">
               <h6>Garage details</h6>
-              <form class="" action="index.html" method="post">
+              <form class="" action="<?php echo base_url('index.php/garage/panel/addGarage');?>" method="post">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input placeholder="Garage Name" class="form-control" type="text" name="" value="">
+                      <input placeholder="Garage Name" class="form-control" type="text" name="garage[gname]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <textarea placeholder="Garage description" name="name" rows="8" cols="80" class="form-control"></textarea>
+                      <textarea placeholder="Garage description" name="garage[gdescription]" rows="8" cols="80" class="form-control"></textarea>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input placeholder="Country" class="form-control" type="text" name="" value="">
+                      <input placeholder="Coutry" class="form-control" type="text" name="garage[country]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Mobile" class="form-control" type="text" name="" value="">
+                      <input placeholder="Phone number" class="form-control" type="text" name="garage[Pnumber]" value="">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Email" class="form-control" type="text" name="" value="">
+                      <input placeholder="Email" class="form-control" type="text" name="garage[email]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-3">
                     <div class="form-group">
-                      <input placeholder="Location" class="form-control" type="text" name="" value="">
+                      <input placeholder="Location" class="form-control" type="text" name="garage[location]" value="">
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="form-group">
-                      <input placeholder="City" class="form-control" type="text" name="" value="">
+                      <input placeholder="City" class="form-control" type="text" name="garage[city]" value="">
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="form-group">
-                      <input placeholder="District" class="form-control" type="text" name="" value="">
+                      <input placeholder="Street" class="form-control" type="text" name="garage[Street]" value="">
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="form-group">
-                      <input placeholder="Street" class="form-control" type="text" name="" value="">
+                      <input placeholder="district" class="form-control" type="text" name="garage[district]" value="">
                     </div>
                   </div>
                 </div>
+                <!-- <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input placeholder="Street" class="form-control" type="text" name="garage[street]" value="">
+                    </div>
+                  </div>
+                </div> -->
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input placeholder="Street" class="form-control" type="text" name="" value="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <select class="form-control" name="">
+                      <select class="form-control" name="garage[users_id]">
                         <option value="" selected disabled>Select Owner</option>
+                        <?php foreach ($ownerlist as $key => $value){?>
+                          <option value="<?php echo $value->id;?>"><?php echo $value->fname." ".$value->lname?></option>
+                        <?php }; ?>
                       </select>
                     </div>
                   </div>
