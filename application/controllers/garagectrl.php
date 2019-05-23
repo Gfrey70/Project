@@ -10,6 +10,15 @@ class garagectrl extends CI_controller
     // code...
     parent::__construct();
     $this->load->helper('url');
+    $this->load->model('Users');
+    $this->load->model('Garage');
+  }
+  function registerOnwer()
+  {
+    $userdata = $this->input->post('user');
+    $userdata['password'] = md5($userdata['lname']);
+    $this->Garage->insertOwner($userdata);
+    redirect('garage/ownerpanel');
   }
   function driverview()
   {
@@ -19,8 +28,9 @@ class garagectrl extends CI_controller
   }
   function ownerview()
   {
+    $data['ownerlist'] = $this->Users->getOwnerList();
     $this->load->view('head');
-    $this->load->view('owner_dashboard');
+    $this->load->view('owner_dashboard',$data);
     $this->load->view('footer');
   }
   function garageview()

@@ -4,6 +4,19 @@
  */
 class Users extends CI_model
 {
+  function getOwnerList()
+  {
+    $this->db->select('*');
+    $this->db->from('users');
+    $this->db->where('rolename','owner');
+    $data = $this->db->get();
+    if ($data) {
+      return $data->result();
+    }else{
+      return false;
+    }
+  }
+
   function getAllUsers()
   {
     $this->db->select('*');
