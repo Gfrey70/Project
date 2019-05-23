@@ -23,6 +23,7 @@ class userctrl extends CI_controller
   {
     $email = $this->input->post('email');
     $password = md5($this->input->post('password'));
+
     $userData = $this->Users->userAuthenticates($email,$password);
 
     if ($userData) {
