@@ -31,7 +31,7 @@ class userctrl extends CI_controller
         $this->session->set_userdata('dataprofile',$userData);
         redirect('user/panel');
       }else{
-        $this->session->set_flashdata('error_message', 'Please Try again.');
+        $this->session->set_flashdata('error_message', 'Please Try again, Password or email is incorrect');
         redirect("go/home");
     }
 

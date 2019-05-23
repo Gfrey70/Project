@@ -1,5 +1,11 @@
 <?php defined('BASEPATH')OR exit('Error'); ?>
 <section>
+  <?php
+    $error_message= $this->session->flashdata('error_message');
+    if($error_message){
+      echo "<h6 class='vl-Error'>".$error_message."</h6>";
+    }
+  ?>
   <div class="vl-map-container-fluid">
     <div class="vl-map-holder" id="vl-map-container"></div>
   </div>
