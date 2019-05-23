@@ -143,7 +143,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <select class="form-control" name="" readonly>
-                        <option value="owner" selected>Female</option>
+                        <option value="owner" selected>Owner</option>
                       </select>
                     </div>
                   </div>
