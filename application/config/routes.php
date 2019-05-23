@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['user/panel'] = 'userctrl/userview';
+$route['garage/panel'] = 'garagectrl/garageview';
 $route['default_controller'] = 'homectrl';
 // $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
