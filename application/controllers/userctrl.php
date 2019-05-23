@@ -28,7 +28,7 @@ class userctrl extends CI_controller
     if ($userData) {
         $this->session->set_userdata('isSessionThere',true);
         $this->session->set_userdata('dataprofile',$userData);
-        redirect('adminpanel/user');
+        redirect('user/panel');
       }else{
         $this->session->set_flashdata('error_message', 'Please Try again.');
         redirect("go/home");
