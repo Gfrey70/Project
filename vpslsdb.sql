@@ -60,14 +60,13 @@ ENGINE = InnoDB;
 -- Table `vpslsdb`.`Drivers`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `vpslsdb`.`Drivers` (
-  `idDriver` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `DName` VARCHAR(45) NULL,
   `phnumber` VARCHAR(45) NULL,
   `sex` VARCHAR(45) NULL,
   `Country` VARCHAR(45) NULL,
   `City` VARCHAR(45) NULL,
-  `age` VARCHAR(45) NULL,
-  PRIMARY KEY (`idDriver`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
@@ -139,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `vpslsdb`.`carservicedrivers` (
   INDEX `fk_carservicedrivers_cargarages1_idx` (`cargarages_id` ASC) ,
   CONSTRAINT `fk_carservicedrivers_Drivers1`
     FOREIGN KEY (`drivers_id`)
-    REFERENCES `vpslsdb`.`Drivers` (`idDriver`)
+    REFERENCES `vpslsdb`.`Drivers` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_carservicedrivers_cargarages1`
