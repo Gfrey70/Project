@@ -22,8 +22,9 @@ class garagectrl extends CI_controller
   }
   function driverview()
   {
+    $data['driverlist'] = $this->Garage->getDrivers();
     $this->load->view('head');
-    $this->load->view('driver_dashboard');
+    $this->load->view('driver_dashboard',$data);
     $this->load->view('footer');
   }
   function ownerview()
