@@ -95,6 +95,9 @@
               <?php $this->load->view('nav');?>
               <!-- for panel nav end here -->
             </div>
+            <!-- profile info -->
+            <?php $this->load->view('pro_info');?>
+            <!-- end here -->
             <div class="vl-panel-body">
               <h6>Tips details</h6>
               <form class="" action="index.html" method="post">
