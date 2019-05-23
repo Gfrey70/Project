@@ -14,8 +14,9 @@ class userctrl extends CI_controller
   }
   function userview()
   {
+    $data['userlist'] = $this->Users->getAllUsers();
     $this->load->view('head');
-    $this->load->view('user_dashboard');
+    $this->load->view('user_dashboard',$data);
     $this->load->view('footer');
   }
 

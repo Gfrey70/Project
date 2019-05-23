@@ -4,6 +4,17 @@
  */
 class Users extends CI_model
 {
+  function getAllUsers()
+  {
+    $this->db->select('*');
+    $this->db->from('users');
+    $data = $this->db->get();
+    if ($data) {
+      return $data->result();
+    }else{
+      return false;
+    }
+  }
   function userAuthenticates($email,$password)
   {
     $filter = array('email' => $email, 'password'=>$password);
