@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-4 vl-2-border">
             <div class="vl-panel-nav-h">
-              <h6>GARAGE OWNERS LIST</h6>
+              <h6>GARAGE OWNER LIST</h6>
             </div>
             <div class="vl-user-list-holder">
               <div class="vl-user-card">
@@ -90,16 +90,17 @@
         <div class="col-md-8 vl-1-border">
           <div class="">
             <div class="vl-panel-nav">
-              <h6>GARAGE OWNERS PANEL</h6>
+              <h6>GARAGE OWNER PANEL</h6>
               <ul>
                 <li><a href="<?php echo base_url('index.php/user/panel');?>"><i class="fa fa-user"></i> User</a> </li>
                 <li><a href="<?php echo base_url('index.php/garage/panel');?>"><i class="fa fa-user"></i> Garage</a> </li>
                 <li><a href="<?php echo base_url('index.php/garage/ownerpanel');?>"><i class="fa fa-user"></i> Owner</a></li>
+                <li><a href="<?php echo base_url('index.php/garage/driverpanel');?>"><i class="fa fa-user"></i> Driver</a></li>
                 <li><a href="<?php echo base_url('index.php/tips/panel');?>"><i class="fa fa-user"></i> Tips</a> </li>
               </ul>
             </div>
             <div class="vl-panel-body">
-              <h6>Garage Owner details</h6>
+              <h6>Owner details</h6>
               <form class="" action="index.html" method="post">
                 <div class="row">
                   <div class="col-md-6">
@@ -137,25 +138,19 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="Country" class="form-control" type="text" name="" value="">
+                      <input placeholder="Mobile" class="form-control" type="text" name="" value="">
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="form-group">
-                      <input placeholder="City" class="form-control" type="text" name="" value="">
+                      <select class="form-control" name="" readonly>
+                        <option value="owner" selected>Female</option>
+                      </select>
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <input placeholder="Phone Number" class="form-control" type="text" name="" value="">
-                    </div>
-                  </div>
-
                 </div>
                 <div class="form-group">
-                  <button type="submit" name="button" class="form-control vl-btn-login vl-wt-clr">Save Owner</button>
+                  <button type="submit" name="button" class="form-control vl-btn-login vl-wt-clr">Save owner</button>
                 </div>
               </form>
             </div>
