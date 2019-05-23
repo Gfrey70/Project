@@ -91,13 +91,9 @@
           <div class="">
             <div class="vl-panel-nav">
               <h6>TIPS PANEL</h6>
-              <ul>
-                <li><a href="<?php echo base_url('index.php/user/panel');?>"><i class="fa fa-user"></i> User</a> </li>
-                <li><a href="<?php echo base_url('index.php/garage/panel');?>"><i class="fa fa-user"></i> Garage</a> </li>
-                <li><a href="<?php echo base_url('index.php/garage/ownerpanel');?>"><i class="fa fa-user"></i> Owner</a></li>
-                <li><a href="<?php echo base_url('index.php/garage/driverpanel');?>"><i class="fa fa-user"></i> Driver</a></li>
-                <li><a href="<?php echo base_url('index.php/tips/panel');?>"><i class="fa fa-user"></i> Tips</a> </li>
-              </ul>
+              <!-- for the panel navi here -->
+              <?php $this->load->view('nav');?>
+              <!-- for panel nav end here -->
             </div>
             <div class="vl-panel-body">
               <h6>Tips details</h6>
