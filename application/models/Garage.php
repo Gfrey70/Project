@@ -24,5 +24,16 @@ class Garage extends CI_model
       return false;
     }
   }
+  function getGarages()
+  {
+    $this->db->select('*');
+    $this->db->from('cargarages');
+    $data = $this->db->get();
+    if ($data) {
+      return $data->result();
+    }else{
+      return false;
+    }
+  }
 }
  ?>

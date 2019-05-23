@@ -42,8 +42,9 @@ class garagectrl extends CI_controller
   }
   function garageview()
   {
+    $data['garagelist'] = $this->Garage->getGarages();
     $this->load->view('head');
-    $this->load->view('garage_dashboard');
+    $this->load->view('garage_dashboard',$data);
     $this->load->view('footer');
   }
 }

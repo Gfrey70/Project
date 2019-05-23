@@ -12,83 +12,15 @@ if(!$this->session->userdata('isSessionThere') == true) {
               <h6>GARAGE LIST</h6>
             </div>
             <div class="vl-user-list-holder">
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
+              <?php foreach ($garagelist as $key => $value){?>
+                <div class="vl-user-card">
+                  <ul>
+                    <li><span class="vl-name"><?php echo $value->gname;?></span></li>
+                    <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
+                    <li><div class="badge badge-primary">View More</div> </li>
+                  </ul>
+                </div>
+              <?php }; ?>
             </div>
         </div>
         <div class="col-md-8 vl-1-border">
