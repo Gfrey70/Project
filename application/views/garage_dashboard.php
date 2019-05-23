@@ -163,6 +163,15 @@
                     </div>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <select class="form-control" name="">
+                        <option value="" selected disabled>Select Owner</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
                 <div class="form-group">
                   <button type="submit" name="button" class="form-control vl-btn-login vl-wt-clr">Save Garage</button>
                 </div>
