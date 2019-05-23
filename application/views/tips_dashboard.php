@@ -12,83 +12,15 @@ if(!$this->session->userdata('isSessionThere') == true) {
               <h6>TIPS LIST</h6>
             </div>
             <div class="vl-user-list-holder">
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
-              <div class="vl-user-card">
-                <ul>
-                  <li><span class="vl-name">Mustapha kassam</span></li>
-                  <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
-                  <li><div class="badge badge-primary">ADMIN</div> </li>
-                </ul>
-              </div>
+              <?php foreach ($tipslist as $key => $value){?>
+                <div class="vl-user-card">
+                  <ul>
+                    <li><span class="vl-name"><?php echo $value->TipsTitle;?></span></li>
+                    <li><span class="vl-tip-span"><?php echo $value->TipsDesc;?></span> </li>
+                    <li><div class="badge badge-primary">View More</div> </li>
+                  </ul>
+                </div>
+              <?php }; ?>
             </div>
         </div>
         <div class="col-md-8 vl-1-border">
@@ -104,18 +36,18 @@ if(!$this->session->userdata('isSessionThere') == true) {
             <!-- end here -->
             <div class="vl-panel-body">
               <h6>Tips details</h6>
-              <form class="" action="index.html" method="post">
+              <form class="" action="<?php echo base_url('index.php/tips/panel/add');?>" method="post">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input placeholder="Tips title" class="form-control" type="text" name="" value="">
+                      <input placeholder="Tips title" class="form-control" type="text" name="tips[TipsTitle]" value="">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <textarea placeholder="Tips description" name="name" rows="8" cols="80" class="form-control"></textarea>
+                      <textarea placeholder="Tips description" name="tips[TipsDesc]" rows="8" cols="80" class="form-control"></textarea>
                     </div>
                   </div>
                 </div>
