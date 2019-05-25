@@ -141,7 +141,7 @@
             </div>
           </div>
           <div class="form-group">
-            <button type="submit" name="button" class="form-control vl-btn-login">Login</button>
+            <button type="submit" name="button" class="form-control vl-btn-login">Register</button>
           </div>
         </form>
       </div>
