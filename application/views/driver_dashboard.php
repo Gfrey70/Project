@@ -16,7 +16,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
                 <div class="vl-user-card">
                   <ul>
                     <li><span class="vl-name"><?php echo $value->fname." ".$value->lname;?></span></li>
-                    <li><span>07156256978, mustapha@gmail.com, p.o.box ilala</span> </li>
+                    <li><span><?php echo $value->pnumber . " , ". $value->email. " ," . $value->address;?></span> </li>
                     <li><div class="badge badge-primary">Driver</div> </li>
                   </ul>
                 </div>
