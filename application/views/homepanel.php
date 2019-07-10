@@ -13,7 +13,7 @@
   <div id="popviewer" class="col-md-12 pop-container ">
     <div class="col-md-6 container">
 
-    <form id="" class="" action="<?php echo base_url('index.php/driver/login');?>" method="post">
+    <form id="driverLogin" class="" action="<?php echo base_url('index.php/driver/login');?>" method="post">
           <h5>DRIVER LOGIN</h5>
           <div class="form-group">
             <input required placeholder="Email" type="text" class="form-control vl-input-underline" name="email" value="">
@@ -26,7 +26,7 @@
           </div>
         </form>
 
-    <form id="" class="" action="index.html" method="post">
+    <form id="driverregister" class="" action="index.html" method="post">
           <h5>DRIVER REGISTER</h5>
           <div class="row">
             <div class="col-md-6">
@@ -94,10 +94,10 @@
             <button id="closepopup" class="form-control btn vl-btn-login">Close</button>
           </div>
           <div class="col-md-4">
-            <button class="form-control btn vl-btn-login">Register</button>
+            <button id="openRegister" class="form-control btn vl-btn-login">Register</button>
           </div>
           <div class="col-md-4">
-            <button class="form-control btn vl-btn-login">Login</button>
+            <button id="openDriverLogin" class="form-control btn vl-btn-login">Login</button>
           </div>
         </div>
     </div>
