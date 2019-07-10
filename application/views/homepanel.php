@@ -91,7 +91,7 @@
 
         <div class="row">
           <div class="col-md-4">
-            <button class="form-control btn vl-btn-login">Close</button>
+            <button id="closepopup" class="form-control btn vl-btn-login">Close</button>
           </div>
           <div class="col-md-4">
             <button class="form-control btn vl-btn-login">Register</button>

@@ -12,3 +12,11 @@ $('#vl-signin-open').on('click', function(){
   $('#vl-signup-form').removeClass('vl-all-open-form').addClass('vl-all-form');
   $('#vl-login-form').removeClass('vl-all-form').addClass('vl-all-open-form');
 })
+
+
+$('#closepopup').on('click', function(){
+  $('#popviewer').hide();
+})
+$('#vl-driver-btn').on('click', function(){
+  $('#popviewer').show();
+})
