@@ -48,8 +48,15 @@ class garagectrl extends CI_controller
   }
   function garageview()
   {
-    $data['ownerlist'] = $this->Users->getOwnerList();
-    $data['garagelist'] = $this->Garage->getGarages();
+    $userdata = $this->session->userdata('dataprofile');
+    if($userdata['rolename'] == 'admin'){
+      $data['ownerlist'] = $this->Users->getOwnerList();
+      $data['garagelist'] = $this->Garage->getGarages();
+    }else{
+      $data['ownerlist'] = $this->Users->getOwnerList($userdata['id']);
+      $data['garagelist'] = $this->Garage->getGarages($userdata['id']);
+    }
+    
     $this->load->view('head');
     $this->load->view('garage_dashboard',$data);
     $this->load->view('footer');

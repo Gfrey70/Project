@@ -28,10 +28,12 @@ class Garage extends CI_model
   {
     $this->db->insert('cargarages',$data);
   }
-  function getGarages()
-  {
+  function getGarages($userId=""){
     $this->db->select('*');
     $this->db->from('cargarages');
+    if($userId){
+      $this->db->where('users_id',$userId);
+    }
     $data = $this->db->get();
     if ($data) {
       return $data->result();

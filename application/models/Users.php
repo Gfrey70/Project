@@ -4,11 +4,15 @@
  */
 class Users extends CI_model
 {
-  function getOwnerList()
+  function getOwnerList($userId="")
   {
     $this->db->select('*');
     $this->db->from('users');
     $this->db->where('rolename','owner');
+
+    if($userId){
+      $this->db->where('id',$userId);
+    }
     $data = $this->db->get();
     if ($data) {
       return $data->result();
