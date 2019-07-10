@@ -11,6 +11,7 @@ class userctrl extends CI_controller
     parent::__construct();
     $this->load->helper('url');
     $this->load->model('Users');
+    $this->load->model('Tips');
   }
   function registerUser()
   {
@@ -21,7 +22,10 @@ class userctrl extends CI_controller
   }
   function userview()
   {
+    $userData = $this->session->userdata('dataprofile');
     $data['userlist'] = $this->Users->getAllUsers();
+    // $data['tipslist'] = $this->Tips->getTips();
+    $data['userdata'] = $userData;
     $this->load->view('head');
     $this->load->view('user_dashboard',$data);
     $this->load->view('footer');
@@ -37,7 +41,19 @@ class userctrl extends CI_controller
     if ($userData) {
         $this->session->set_userdata('isSessionThere',true);
         $this->session->set_userdata('dataprofile',$userData);
-        redirect('user/panel');
+        echo '<pre>';
+        print_r($userData['rolename']);
+
+        if($userData['rolename'] == 'owner'){
+
+          redirect('tipsctrl/tipsview');
+
+        }else if($userData['rolename'] == 'admin'){
+
+          redirect('user/panel');
+          
+        }
+        //die();
       }else{
         $this->session->set_flashdata('error_message', 'Please Try again, Password or email is incorrect');
         redirect("go/home");
