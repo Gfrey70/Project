@@ -49,6 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['driver/register'] = 'driversctrl/saveDriver';
+$route['driver/login'] = 'driversctrl/login';
 $route['user/panel'] = 'userctrl/userview';
 $route['user/panel/add'] = 'userctrl/registerUser';
 $route['user/login'] = 'userctrl/userLogin';

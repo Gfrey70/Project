@@ -26,29 +26,29 @@
           </div>
         </form>
 
-    <form id="driverregister" class="" action="index.html" method="post">
+    <form id="driverregister" class="" action="<?=base_url('index.php/driver/register')?>" method="post">
           <h5>DRIVER REGISTER</h5>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="First Name" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="First Name" type="text" class="form-control vl-input-underline" name="driver[fname]" value="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Last Name" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Last Name" type="text" class="form-control vl-input-underline" name="driver[lname]" value="">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Address" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Address" type="text" class="form-control vl-input-underline" name="driver[address]" value="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-              <select class="form-control vl-input-underline" name="">
+              <select class="form-control vl-input-underline" name="driver[gender]">
                 <option value="" selected disabled>Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -59,24 +59,19 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Email" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Email" type="text" class="form-control vl-input-underline" name="driver[email]" value="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Mobile" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Mobile" type="text" class="form-control vl-input-underline" name="driver[pnumber]" value="">
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="form-group">
-                <input placeholder="Password" type="password" class="form-control vl-input-underline" name="" value="">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input placeholder="Re-type Password" type="password" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Password" type="password" class="form-control vl-input-underline" name="password" value="">
               </div>
             </div>
           </div>
