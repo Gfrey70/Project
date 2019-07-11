@@ -1,188 +1,338 @@
--- MySQL Workbench Forward Engineering
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 11, 2019 at 09:24 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.0.32
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
-
--- -----------------------------------------------------
--- Schema vpslsdb
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema vpslsdb
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `vpslsdb` DEFAULT CHARACTER SET utf8 ;
-USE `vpslsdb` ;
-
--- -----------------------------------------------------
--- Table `vpslsdb`.`users`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `vpslsdb`.`users` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `fname` VARCHAR(255) NULL DEFAULT NULL,
-  `lname` VARCHAR(255) NULL DEFAULT NULL,
-  `gender` VARCHAR(45) NULL DEFAULT NULL,
-  `mobile` INT(11) NULL DEFAULT NULL,
-  `email` VARCHAR(255) NULL DEFAULT NULL,
-  `password` VARCHAR(255) NULL DEFAULT NULL,
-  `address` VARCHAR(45) NULL DEFAULT NULL,
-  `rolename` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-AUTO_INCREMENT = 5
-DEFAULT CHARACTER SET = utf8;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
--- -----------------------------------------------------
--- Table `vpslsdb`.`cargarages`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `vpslsdb`.`cargarages` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `gname` VARCHAR(45) NULL DEFAULT NULL,
-  `gdescription` TEXT NULL DEFAULT NULL,
-  `location` VARCHAR(45) NULL DEFAULT NULL,
-  `city` VARCHAR(45) NULL DEFAULT NULL,
-  `district` VARCHAR(45) NULL DEFAULT NULL,
-  `street` VARCHAR(45) NULL DEFAULT NULL,
-  `country` VARCHAR(45) NULL DEFAULT NULL,
-  `Pnumber` VARCHAR(45) NULL DEFAULT NULL,
-  `email` VARCHAR(45) NULL DEFAULT NULL,
-  `users_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_cargarages_users_idx` (`users_id` ASC) ,
-  CONSTRAINT `fk_cargarages_users`
-    FOREIGN KEY (`users_id`)
-    REFERENCES `vpslsdb`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-AUTO_INCREMENT = 2
-DEFAULT CHARACTER SET = utf8;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `vpslsdb`
+--
 
--- -----------------------------------------------------
--- Table `vpslsdb`.`drivers`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `vpslsdb`.`drivers` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `fname` VARCHAR(45) NULL DEFAULT NULL,
-  `lname` VARCHAR(255) NOT NULL,
-  `pnumber` VARCHAR(45) NULL DEFAULT NULL,
-  `address` VARCHAR(255) NOT NULL,
-  `email` VARCHAR(255) NOT NULL,
-  `gender` VARCHAR(45) NULL DEFAULT NULL,
-  `country` VARCHAR(45) NULL DEFAULT NULL,
-  `city` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-AUTO_INCREMENT = 2
-DEFAULT CHARACTER SET = utf8;
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `cargarages`
+--
 
--- -----------------------------------------------------
--- Table `vpslsdb`.`carservicedrivers`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `vpslsdb`.`carservicedrivers` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `doc` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-  `drivers_id` INT(11) NOT NULL,
-  `cargarages_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_carservicedrivers_Drivers1_idx` (`drivers_id` ASC) ,
-  INDEX `fk_carservicedrivers_cargarages1_idx` (`cargarages_id` ASC) ,
-  CONSTRAINT `fk_carservicedrivers_Drivers1`
-    FOREIGN KEY (`drivers_id`)
-    REFERENCES `vpslsdb`.`drivers` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_carservicedrivers_cargarages1`
-    FOREIGN KEY (`cargarages_id`)
-    REFERENCES `vpslsdb`.`cargarages` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+CREATE TABLE `cargarages` (
+  `id` int(11) NOT NULL,
+  `gname` varchar(45) DEFAULT NULL,
+  `gdescription` text,
+  `location` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `district` varchar(45) DEFAULT NULL,
+  `street` varchar(45) DEFAULT NULL,
+  `country` varchar(45) DEFAULT NULL,
+  `Pnumber` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `users_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `cargarages`
+--
 
--- -----------------------------------------------------
--- Table `vpslsdb`.`garageservices`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `vpslsdb`.`garageservices` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `servicename` VARCHAR(45) NULL DEFAULT NULL,
-  `servicedescription` VARCHAR(45) NULL DEFAULT NULL,
-  `doc` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-  `cargarages_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_garageservices_cargarages1_idx` (`cargarages_id` ASC) ,
-  CONSTRAINT `fk_garageservices_cargarages1`
-    FOREIGN KEY (`cargarages_id`)
-    REFERENCES `vpslsdb`.`cargarages` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+INSERT INTO `cargarages` (`id`, `gname`, `gdescription`, `location`, `city`, `district`, `street`, `country`, `Pnumber`, `email`, `users_id`) VALUES
+(1, 'Najma spares', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,\r\n sed do eiusmod tempor incididunt ut labore et dolore magna\r\n aliqua. Ut enim ad minim veniam, quis nostrud exercitation ', 'ila', 'dSM', 'ilala', 'ilala, boma', 'tanzania', '456456', 'h@gmail.com', 3);
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `vpslsdb`.`gpslocations`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `vpslsdb`.`gpslocations` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `LongTude` DOUBLE NULL DEFAULT NULL,
-  `latTude` DOUBLE NULL DEFAULT NULL,
-  `cargarages_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_GpsLocations_cargarages1_idx` (`cargarages_id` ASC) ,
-  CONSTRAINT `fk_GpsLocations_cargarages1`
-    FOREIGN KEY (`cargarages_id`)
-    REFERENCES `vpslsdb`.`cargarages` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+--
+-- Table structure for table `carservicedrivers`
+--
 
+CREATE TABLE `carservicedrivers` (
+  `id` int(11) NOT NULL,
+  `doc` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `drivers_id` int(11) NOT NULL,
+  `cargarages_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- -----------------------------------------------------
--- Table `vpslsdb`.`logsheets`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `vpslsdb`.`logsheets` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `logusername` VARCHAR(45) NULL DEFAULT NULL,
-  `date` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-  `users_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_LogSheets_users1_idx` (`users_id` ASC) ,
-  CONSTRAINT `fk_LogSheets_users1`
-    FOREIGN KEY (`users_id`)
-    REFERENCES `vpslsdb`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `drivers`
+--
 
--- -----------------------------------------------------
--- Table `vpslsdb`.`mainttips`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `vpslsdb`.`mainttips` (
-  `idmaintTips` INT(11) NOT NULL AUTO_INCREMENT,
-  `TipsTitle` VARCHAR(100) NULL DEFAULT NULL,
-  `TipsDesc` VARCHAR(200) NULL DEFAULT NULL,
-  `doc` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-  `addedby` INT(11) NOT NULL,
-  PRIMARY KEY (`idmaintTips`),
-  INDEX `fk_maintTips_users1_idx` (`addedby` ASC) ,
-  CONSTRAINT `fk_maintTips_users1`
-    FOREIGN KEY (`addedby`)
-    REFERENCES `vpslsdb`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-AUTO_INCREMENT = 2
-DEFAULT CHARACTER SET = utf8;
+CREATE TABLE `drivers` (
+  `id` int(11) NOT NULL,
+  `fname` varchar(45) DEFAULT NULL,
+  `lname` varchar(255) NOT NULL,
+  `pnumber` varchar(45) DEFAULT NULL,
+  `address` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  `country` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `rolename` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `drivers`
+--
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+INSERT INTO `drivers` (`id`, `fname`, `lname`, `pnumber`, `address`, `email`, `gender`, `country`, `city`, `password`, `rolename`) VALUES
+(1, 'mwalimu', 'juma', '0987', 'ili', 'juma@gmail.com', 'male', 'tanzania', 'dar es salama', '', 'driver'),
+(2, 'mwalimu', 'juma', '234234', '34234', 'mwalimu@gmail.com', 'male', NULL, NULL, '202cb962ac59075b964b07152d234b70', 'driver');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `garageservices`
+--
+
+CREATE TABLE `garageservices` (
+  `id` int(11) NOT NULL,
+  `servicename` varchar(45) DEFAULT NULL,
+  `servicedescription` varchar(45) DEFAULT NULL,
+  `doc` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `cargarages_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gpslocations`
+--
+
+CREATE TABLE `gpslocations` (
+  `id` int(11) NOT NULL,
+  `LongTude` double DEFAULT NULL,
+  `latTude` double DEFAULT NULL,
+  `cargarages_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logsheets`
+--
+
+CREATE TABLE `logsheets` (
+  `id` int(11) NOT NULL,
+  `logusername` varchar(45) DEFAULT NULL,
+  `date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `users_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mainttips`
+--
+
+CREATE TABLE `mainttips` (
+  `idmaintTips` int(11) NOT NULL,
+  `TipsTitle` varchar(100) DEFAULT NULL,
+  `TipsDesc` varchar(200) DEFAULT NULL,
+  `doc` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `addedby` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `mainttips`
+--
+
+INSERT INTO `mainttips` (`idmaintTips`, `TipsTitle`, `TipsDesc`, `doc`, `addedby`) VALUES
+(1, 'How to cool my engine', 'Damn. Did he drive a police car? What about their driver training? I have a brother-in-law who is a police officer in Scotland. There\'s a rigorous course just for to be allowed to drive a panda car ar', '2019-05-23 12:08:41', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `fname` varchar(255) DEFAULT NULL,
+  `lname` varchar(255) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `rolename` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `fname`, `lname`, `gender`, `mobile`, `email`, `password`, `address`, `rolename`) VALUES
+(1, 'kassam', 'Namwitika', 'male', 719525658, 'tito@gmail.com', '202cb962ac59075b964b07152d234b70', 'ilala', 'admin'),
+(2, 'panga', 'fred', 'male', 719525658, 'tit@gmail', '202cb962ac59075b964b07152d234b70', 'ilala', 'normal'),
+(3, 'godfrey', 'mathias', 'male', 7195256, 'muna@gmail.com', '202cb962ac59075b964b07152d234b70', 'ila po boz', 'owner'),
+(4, 'fatuma', 'saidi', 'female', 255555, 'muna@gmail.com', '202cb962ac59075b964b07152d234b70', 'ilala', 'owner'),
+(5, 'tes', 'sts', 'female', 456456, 'test@gmail', '202cb962ac59075b964b07152d234b70', 'se', 'owner');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cargarages`
+--
+ALTER TABLE `cargarages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_cargarages_users_idx` (`users_id`);
+
+--
+-- Indexes for table `carservicedrivers`
+--
+ALTER TABLE `carservicedrivers`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_carservicedrivers_Drivers1_idx` (`drivers_id`),
+  ADD KEY `fk_carservicedrivers_cargarages1_idx` (`cargarages_id`);
+
+--
+-- Indexes for table `drivers`
+--
+ALTER TABLE `drivers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `garageservices`
+--
+ALTER TABLE `garageservices`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_garageservices_cargarages1_idx` (`cargarages_id`);
+
+--
+-- Indexes for table `gpslocations`
+--
+ALTER TABLE `gpslocations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_GpsLocations_cargarages1_idx` (`cargarages_id`);
+
+--
+-- Indexes for table `logsheets`
+--
+ALTER TABLE `logsheets`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_LogSheets_users1_idx` (`users_id`);
+
+--
+-- Indexes for table `mainttips`
+--
+ALTER TABLE `mainttips`
+  ADD PRIMARY KEY (`idmaintTips`),
+  ADD KEY `fk_maintTips_users1_idx` (`addedby`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cargarages`
+--
+ALTER TABLE `cargarages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `carservicedrivers`
+--
+ALTER TABLE `carservicedrivers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `drivers`
+--
+ALTER TABLE `drivers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `garageservices`
+--
+ALTER TABLE `garageservices`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `gpslocations`
+--
+ALTER TABLE `gpslocations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `logsheets`
+--
+ALTER TABLE `logsheets`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `mainttips`
+--
+ALTER TABLE `mainttips`
+  MODIFY `idmaintTips` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `cargarages`
+--
+ALTER TABLE `cargarages`
+  ADD CONSTRAINT `fk_cargarages_users` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `carservicedrivers`
+--
+ALTER TABLE `carservicedrivers`
+  ADD CONSTRAINT `fk_carservicedrivers_Drivers1` FOREIGN KEY (`drivers_id`) REFERENCES `drivers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_carservicedrivers_cargarages1` FOREIGN KEY (`cargarages_id`) REFERENCES `cargarages` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `garageservices`
+--
+ALTER TABLE `garageservices`
+  ADD CONSTRAINT `fk_garageservices_cargarages1` FOREIGN KEY (`cargarages_id`) REFERENCES `cargarages` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `gpslocations`
+--
+ALTER TABLE `gpslocations`
+  ADD CONSTRAINT `fk_GpsLocations_cargarages1` FOREIGN KEY (`cargarages_id`) REFERENCES `cargarages` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `logsheets`
+--
+ALTER TABLE `logsheets`
+  ADD CONSTRAINT `fk_LogSheets_users1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `mainttips`
+--
+ALTER TABLE `mainttips`
+  ADD CONSTRAINT `fk_maintTips_users1` FOREIGN KEY (`addedby`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
