@@ -172,29 +172,30 @@ If you don't see any cuts or leaks, the parts are moving freely, and your AC blo
             <button type="submit" name="button" class="form-control vl-btn-login">Login</button>
           </div>
         </form>
-        <form id="vl-signup-form" class="vl-all-form" action="index.html" method="post">
-          <h5>SIGN UP</h5>
+
+        <form id="vl-signup-form" class="vl-all-form" action="<?=base_url('index.php/owner/register')?>" method="post">
+          <h5>GARAGE OWNER -> SIGN UP</h5>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="First Name" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="First Name" type="text" class="form-control vl-input-underline" name="owner[fname]" value="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Last Name" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Last Name" type="text" class="form-control vl-input-underline" name="owner[lname]" value="">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Address" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Address" type="text" class="form-control vl-input-underline" name="owner[address]" value="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-              <select class="form-control vl-input-underline" name="">
+              <select class="form-control vl-input-underline" name="owner[gender]">
                 <option value="" selected disabled>Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -205,26 +206,22 @@ If you don't see any cuts or leaks, the parts are moving freely, and your AC blo
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Email" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Email" type="text" class="form-control vl-input-underline" name="owner[email]" value="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Mobile" type="text" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Mobile" type="text" class="form-control vl-input-underline" name="owner[mobile]" value="">
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="form-group">
-                <input placeholder="Password" type="password" class="form-control vl-input-underline" name="" value="">
+                <input placeholder="Password" type="password" class="form-control vl-input-underline" name="password" value="">
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input placeholder="Re-type Password" type="password" class="form-control vl-input-underline" name="" value="">
-              </div>
-            </div>
+            
           </div>
           <div class="form-group">
             <button type="submit" name="button" class="form-control vl-btn-login">Register</button>

@@ -51,7 +51,7 @@ class userctrl extends CI_controller
         }else if($userData['rolename'] == 'admin'){
 
           redirect('user/panel');
-          
+
         }
         //die();
       }else{
@@ -59,6 +59,14 @@ class userctrl extends CI_controller
         redirect("go/home");
     }
 
+  }
+
+  function owner_register(){
+    $data = $this->input->post('owner');
+    $data['password'] = md5($this->input->post('password'));
+    $data['rolename'] = 'owner';
+    $this->Users->ownerRegister($data);
+    redirect('go/home');
   }
 
   function userLogout()

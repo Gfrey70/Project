@@ -49,5 +49,8 @@ class Users extends CI_model
       return false;
     }
   }
+  function ownerRegister($data){
+    $this->db->insert('users',$data);
+  }
 }
  ?>
