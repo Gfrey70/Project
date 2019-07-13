@@ -46,8 +46,14 @@ class garagectrl extends CI_controller
     $this->Garage->saveGarage($gDetails);
     redirect('garage/panel');
   }
-  function garageview()
-  {
+  function garagelist(){
+    $userdata = $this->session->userdata('dataprofile');
+    $data['garagelist'] = $this->Garage->getGarages();
+    $this->load->view('head');
+    $this->load->view('garagelist',$data);
+    $this->load->view('footer');
+  }
+  function garageview(){
     $userdata = $this->session->userdata('dataprofile');
     if($userdata['rolename'] == 'admin'){
       $data['ownerlist'] = $this->Users->getOwnerList();
