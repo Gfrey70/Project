@@ -24,63 +24,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
                     <!-- <div class="badge badge-primary">Delete</div>  </li> -->
                   </ul>
                 </div>
-              <?php }; ?>
-              <div class="vl-garage-card">
-                  <ul>
-                    <li><span class="vl-name"><?php echo $value->gname;?></span></li>
-                    <li><span><?php echo $value->Pnumber . " , ". $value->email. " ," . $value->district;?></span> </li>
-                    <li><div class="badge badge-primary">View More</div>
-                    <div class="badge badge-primary">Delete</div>  </li>
-                  </ul>
-                </div>
-                <div class="vl-garage-card">
-                  <ul>
-                    <li><span class="vl-name"><?php echo $value->gname;?></span></li>
-                    <li><span><?php echo $value->Pnumber . " , ". $value->email. " ," . $value->district;?></span> </li>
-                    <li><div class="badge badge-primary">View More</div>
-                    <div class="badge badge-primary">Delete</div>  </li>
-                  </ul>
-                </div>
-                <div class="vl-garage-card">
-                  <ul>
-                    <li><span class="vl-name"><?php echo $value->gname;?></span></li>
-                    <li><span><?php echo $value->Pnumber . " , ". $value->email. " ," . $value->district;?></span> </li>
-                    <li><div class="badge badge-primary">View More</div>
-                    <div class="badge badge-primary">Delete</div>  </li>
-                  </ul>
-                </div>
-                <div class="vl-garage-card">
-                  <ul>
-                    <li><span class="vl-name"><?php echo $value->gname;?></span></li>
-                    <li><span><?php echo $value->Pnumber . " , ". $value->email. " ," . $value->district;?></span> </li>
-                    <li><div class="badge badge-primary">View More</div>
-                    <div class="badge badge-primary">Delete</div>  </li>
-                  </ul>
-                </div>
-                <div class="vl-garage-card">
-                  <ul>
-                    <li><span class="vl-name"><?php echo $value->gname;?></span></li>
-                    <li><span><?php echo $value->Pnumber . " , ". $value->email. " ," . $value->district;?></span> </li>
-                    <li><div class="badge badge-primary">View More</div>
-                    <div class="badge badge-primary">Delete</div>  </li>
-                  </ul>
-                </div>
-                <div class="vl-garage-card">
-                  <ul>
-                    <li><span class="vl-name"><?php echo $value->gname;?></span></li>
-                    <li><span><?php echo $value->Pnumber . " , ". $value->email. " ," . $value->district;?></span> </li>
-                    <li><div class="badge badge-primary">View More</div>
-                    <div class="badge badge-primary">Delete</div>  </li>
-                  </ul>
-                </div>
-                <div class="vl-garage-card">
-                  <ul>
-                    <li><span class="vl-name"><?php echo $value->gname;?></span></li>
-                    <li><span><?php echo $value->Pnumber . " , ". $value->email. " ," . $value->district;?></span> </li>
-                    <li><div class="badge badge-primary">View More</div>
-                    <div class="badge badge-primary">Delete</div>  </li>
-                  </ul>
-                </div>
+              <?php };?>
             </div>
         </div>
       </div>
