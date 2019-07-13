@@ -27,7 +27,7 @@ class driversctrl extends CI_controller{
         $this->session->set_userdata('dataprofile',$userData);
 
         if($userData['rolename'] == 'driver'){
-          redirect('tipsctrl/tipsview');
+          redirect('garage/list');
         };
         //die();
       }else{

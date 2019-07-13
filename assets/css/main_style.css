@@ -23,6 +23,22 @@
     overflow: hidden;
     display: inline-block;
 }
+.viewerholder {
+  background: #ffffff;
+  padding: 10px;
+}
+.vl-garage-card {
+  background: #ffffff;
+  width: 24%;
+  float:left;
+  margin-left: 10px;
+  padding: 10px;
+  margin-top: 14px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 8px -3px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 3px 8px -3px rgba(0,0,0,0.1);
+box-shadow: 0px 3px 8px -3px rgba(0,0,0,0.1);
+}
 .vl-user-card {
     background: #ffffff;
     padding: 10px;
@@ -32,13 +48,21 @@
 -moz-box-shadow: 0px 3px 8px -3px rgba(0,0,0,0.1);
 box-shadow: 0px 3px 8px -3px rgba(0,0,0,0.1);
 }
-.vl-user-card ul{
+.vl-user-card ul,.vl-garage-card ul{
   padding:0;
   list-style:none;
 }
-.vl-user-card ul li span{
+.vl-user-card ul li span,.vl-garage-card ul li span{
   color:#687984;
   font-size:12px;
+}
+.viewerholder ul{
+  padding:0px;
+}
+.viewerholder ul li{
+  display: inline-block;
+  margin-left: 10px;
+  color: #28a745;
 }
 .vl-2-border {
     border-left: 1px solid rgba(90, 83, 57, 0.19);
@@ -47,7 +71,7 @@ box-shadow: 0px 3px 8px -3px rgba(0,0,0,0.1);
 .vl-1-border{
   border-right: 1px solid rgba(90, 83, 57, 0.19);
 }
-.vl-user-card ul li span.vl-name{
+.vl-user-card ul li span.vl-name,.vl-garage-card ul li span.vl-name{
   color:#5a5339;
   font-size:1rem;
   font-weight:500;
@@ -60,8 +84,15 @@ box-shadow: 0px 3px 8px -3px rgba(0,0,0,0.1);
   -moz-box-shadow: inset 0px 3px 8px -3px rgba(0,0,0,0.4);
   box-shadow: inset 0px 3px 8px -3px rgba(0,0,0,0.4);
 }
+.vl-user-list-holder-list{
+  height: 520px;
+  padding: 10px;
+  -webkit-box-shadow: inset 0px 3px 8px -3px rgba(0,0,0,0.4);
+  -moz-box-shadow: inset 0px 3px 8px -3px rgba(0,0,0,0.4);
+  box-shadow: inset 0px 3px 8px -3px rgba(0,0,0,0.4);
+}
 .vl-user-list-holder:hover{
-overflow-y: scroll;
+  overflow-y: scroll;
 }
 .vl-panel-nav ul li{
   display:inline-block;
@@ -193,11 +224,14 @@ box-shadow: 0px 3px 8px -3px rgba(0,0,0,0.1);
 }
 .vl-profile-tab {
     display: inline-block;
-    float: right;
+    /* float: right; */
     top: 0;
     position: absolute;
     right: 0;
     padding:20px;
+}
+.profileholder .vl-profile-tab{
+  top:-22px;
 }
 .vl-profile-tab ul{
   list-style:none;

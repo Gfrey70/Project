@@ -24,8 +24,7 @@ class Garage extends CI_model
       return false;
     }
   }
-  function saveGarage($data)
-  {
+  function saveGarage($data){
     $this->db->insert('cargarages',$data);
   }
   function getGarages($userId=""){
@@ -40,6 +39,14 @@ class Garage extends CI_model
     }else{
       return false;
     }
+  }
+  function getGarage($id){
+    $this->db->select('*');
+    $this->db->from('cargarages');
+    $this->db->where('id',$id);
+    $data = $this->db->get();
+    $data = $data->result_array();
+    return $data[0];
   }
 }
  ?>
