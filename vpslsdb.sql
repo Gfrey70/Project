@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2019 at 09:24 AM
+-- Generation Time: Jul 15, 2019 at 06:17 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.0.32
 
@@ -87,8 +87,28 @@ CREATE TABLE `drivers` (
 --
 
 INSERT INTO `drivers` (`id`, `fname`, `lname`, `pnumber`, `address`, `email`, `gender`, `country`, `city`, `password`, `rolename`) VALUES
-(1, 'mwalimu', 'juma', '0987', 'ili', 'juma@gmail.com', 'male', 'tanzania', 'dar es salama', '', 'driver'),
+(1, 'mwalimu', 'juma', '0987', 'ili', 'juma@gmail.com', 'male', 'tanzania', 'dar es salama', '202cb962ac59075b964b07152d234b70', 'driver'),
 (2, 'mwalimu', 'juma', '234234', '34234', 'mwalimu@gmail.com', 'male', NULL, NULL, '202cb962ac59075b964b07152d234b70', 'driver');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `id` int(11) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `cargarageid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id`, `description`, `cargarageid`) VALUES
+(1, 'yuko vizuri kabisa', 1),
+(2, 'hahahhsa', 1);
 
 -- --------------------------------------------------------
 
@@ -206,6 +226,12 @@ ALTER TABLE `drivers`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `garageservices`
 --
 ALTER TABLE `garageservices`
@@ -259,6 +285,12 @@ ALTER TABLE `carservicedrivers`
 -- AUTO_INCREMENT for table `drivers`
 --
 ALTER TABLE `drivers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
