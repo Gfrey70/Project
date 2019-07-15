@@ -29,3 +29,11 @@ $('#closepopup').on('click', function(){
 $('#vl-driver-btn').on('click', function(){
   $('#popviewer').show();
 })
+
+$('.v-row-slider').slick(
+  {
+    dots:false,
+    autoplay: true,
+    slidesToShow:3,
+    autoplaySpeed: 8000
+});
