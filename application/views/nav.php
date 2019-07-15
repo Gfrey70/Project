@@ -33,6 +33,7 @@ if($profile['rolename'] == 'admin'){?>
 
       <li><a href="<?php echo base_url('index.php/garage/panel');?>"><i class="fa fa-user"></i> Garage</a> </li>
       <li><a href="<?php echo base_url('index.php/tips/panel');?>"><i class="fa fa-user"></i> Tips</a> </li>
+      <!-- <li><a href="<?php echo base_url('index.php/garage/feedback/list');?>"><i class="fa fa-comment"></i> Feedback</a> </li> -->
   </ul>
 
 <?php }?>
