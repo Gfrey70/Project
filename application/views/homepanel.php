@@ -36,14 +36,14 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Last Name" type="text" class="form-control vl-input-underline" name="driver[lname]" value="">
+                <input required placeholder="Last Name" type="text" class="form-control vl-input-underline" name="driver[lname]" value="">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Address" type="text" class="form-control vl-input-underline" name="driver[address]" value="">
+                <input required placeholder="Address" type="text" class="form-control vl-input-underline" name="driver[address]" value="">
               </div>
             </div>
             <div class="col-md-6">
@@ -59,19 +59,19 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Email" type="text" class="form-control vl-input-underline" name="driver[email]" value="">
+                <input required placeholder="Email" type="text" class="form-control vl-input-underline" name="driver[email]" value="">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input placeholder="Mobile" type="text" class="form-control vl-input-underline" name="driver[pnumber]" value="">
+                <input required placeholder="Mobile" type="text" class="form-control vl-input-underline" name="driver[pnumber]" value="">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input placeholder="Password" type="password" class="form-control vl-input-underline" name="password" value="">
+                <input required placeholder="Password" type="password" class="form-control vl-input-underline" name="password" value="">
               </div>
             </div>
           </div>
