@@ -40,6 +40,9 @@ class Garage extends CI_model
       return false;
     }
   }
+  function saveFeedback($data){
+    $this->db->insert('feedback',$data);
+  }
   function getGarage($id){
     $this->db->select('*');
     $this->db->from('cargarages');

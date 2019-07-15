@@ -27,7 +27,19 @@ if(!$this->session->userdata('isSessionThere') == true) {
                     <p><?=$garagedata['gdescription'];?></p>
                     <p><strong>Mobile:</strong> <?=$garagedata['Pnumber'];?></p>
                     <p><strong>Email:</strong> <?=$garagedata['email'];?></p>
-                    <a href="<?=base_url('index.php/garage/list')?>" class="btn btn-primary">Back</a>
+                  <form method="post" action="<?=base_url('index.php/garage/feedback/save')?>">
+                    <small>Enter feedback</small>
+                    <input value="<?=$garagedata['id']?>" type="hidden" name="feedback[cargarageid]">
+                    <textarea placeholder="enter feedback here..." class="form-control" name="feedback[description]" id="" cols="20" rows="6"></textarea>
+                   <div class="row">
+                   <div class="col-md-6">
+                    <a href="<?=base_url('index.php/garage/list')?>" class="btn btn-primary btn-block">Back</a>
+                     </div>
+                     <div class="col-md-6">
+                     <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                     </div>
+                   </div>
+                  </form>
                 </div>
             </div>
         </div>

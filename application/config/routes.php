@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['garage/list']=  'garagectrl/garagelist';
 $route['garage/list/viewer/(:num)']=  'garagectrl/garageViewer/$1';
+$route['garage/feedback/save']=  'garagectrl/feedback_save';
 $route['owner/register'] = 'userctrl/owner_register';
 $route['driver/register'] = 'driversctrl/saveDriver';
 $route['driver/login'] = 'driversctrl/login';
