@@ -18,7 +18,7 @@ if(!$this->session->userdata('isSessionThere') == true) {
                     <li><span class="vl-name"><?php echo $value->gname;?></span></li>
                     <li><span><?php echo $value->Pnumber . " , ". $value->email. " ," . $value->district;?></span> </li>
                     <li><div class="badge badge-primary">View More</div>
-                    <div class="badge badge-primary">Delete</div>  </li>
+                    <a href="<?php echo base_url('index.php/garage/feedback/list/').$value->id;?>" class="badge badge-primary">feedback</a>  </li>
                   </ul>
                 </div>
               <?php }; ?>
